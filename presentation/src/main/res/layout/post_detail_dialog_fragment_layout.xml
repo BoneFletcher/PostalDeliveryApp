@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.sdv.presentation.ui.pager.user.UsersViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_post_title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Title"
+        android:textColor="@color/colorTextPost"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_post_body"
+        app:layout_constraintTop_toBottomOf="@id/tv_post_title"
+        app:layout_constraintStart_toStartOf="@id/tv_post_title"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/colorTextPost"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_post_body"
+        app:layout_constraintStart_toStartOf="@id/tv_post_body"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/colorTextPost"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_number_of_comments"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        app:layout_constraintStart_toStartOf="@id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/colorTextPost"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/btn_ok"
+        android:layout_marginEnd="16dp"
+        android:text="@string/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
